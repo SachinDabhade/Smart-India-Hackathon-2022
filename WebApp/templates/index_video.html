@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div style="background-color: black;">
+    
+    <div class="container">
+        <br>
+        <h4 style="text-align: center;color: rgb(255, 255, 255);">&#10024;Number Plate Detection from Video&#10024;</h4>
+        <br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" class="form-control" name="video_name" required>
+                <input type="submit" href="video_result.html" value="Upload" class="btn btn-outline-secondary">
+            </div>
+        </form>
+    </div>
+
+    {% if upload %}
+
+    <br>
+    <h4 style="text-align: center;color: rgb(255, 255, 255);">&#10024;Number Plate Detection from Video&#10024;</h4>
+        <div class="container">
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        
+                        <!-- <img class="rounded float-right img-fluid" src="/static/predict/example.jpg" alt=""> -->
+                    <!-- </td>
+                </tr>
+            </table> -->
+        </div>
+    <!-- </div>     -->
+    
+    {% endif %}
+    
+
+{% endblock  %}
+
+</div>

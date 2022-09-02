@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+  <body>
+    <h1>DHANUSH</h1>
+
+    <div style="font-family: Arial Black;text-align: center; border: 2px solid black;"class="alert alert-{{Matched}}">
+        WELCOME TO COAL INDIA LIMITED <br>
+        INFORMATION FETCH {{Matched_Status}}...<br><br>
+        
+        {% for detail in details %}
+        Owner: {{ detail[0] }}<br>
+        Driver: {{ detail[1] }}<br>
+        Gender: {{ detail[2] }}<br>
+        Vehicle Type: {{ detail[3] }}<br>
+        RFID: {{ detail[4] }}<br>
+        Mobile Number: {{ detail[5] }}<br>
+        Email: {{ detail[6] }}<br><br>
+        {% endfor %}
+    </div>
+
+  </body>
+</html>

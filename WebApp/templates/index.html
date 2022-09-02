@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHANUSH</title>
+    <body>
+{% extends 'layout.html' %}
+
+{% block body %}
+<div style="background-color: black;">
+    
+    <div class="container">
+        <br>
+        <h4 style="text-align: center;color: rgb(255, 255, 255);">&#10024;Number Plate Detection from Image&#10024;</h4>
+        <br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" class="form-control" name="image_name" required>
+                <input type="submit" value="Upload" class="btn btn-outline-secondary">
+            </div>
+        </form>
+    </div>
+<br>
+
+
+
+
+
+    {% if upload %}
+        <div class="container">  
+            
+                <h1 style="text-align: center;font-family:Arial Black;font-size:larger;color: white;">&#128512;LET'S SEE THE RESULTS&#128512;</h1>
+             
+            <br>
+            
+            <div class="alert alert-{{Detected}}" role="alert">
+                <h4 style="text-align: center;font-family:Arial Black;font-size:larger;">Number Plate Detected {{ D_status }}
+                {{New_method}}</h4>
+            </div>
+
+
+
+            <br>
+
+            <table>
+                <tr>
+                    <td>
+                        <img class="rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="">
+                    </td>
+                    <td>
+                        <img class="rounded float-right img-fluid" src="/static/predict/{{ upload_image }}" alt="">
+                    </td>
+                </tr>
+            </table>
+
+            <!-- <table>
+                <tr>
+                    <br>
+                    <td>
+                        <img style="height: 70px; padding-left: 472px;" class="rounded float-left img-fluid" src="/static/roi/{{ upload_image }}.jpg" alt="">
+                    </td>
+                </tr>
+            </table> -->
+
+            <br>
+            <table style="border: solid black; width: 100%;">
+                
+                <div class="alert alert-{{Recognized}}" role="alert">
+                    <h4  style="text-align: center;font-family:Arial Black;font-size:larger;">Pattern Matched {{R_status}}</h4>
+                </div>
+
+                <tr style="color:white;">
+                    <th style="font-size:larger ;">Number of License Plate Detected = {{no}} </th>
+                </tr>
+
+                    {% for lic in text %}
+                    <tr style="border: solid black;">
+                    <td style="background-color: greenyellow;">
+                        <p style="font-family: Arial Black;padding-top:10px;text-align:center;"> {{ lic }}</p>
+                    </td>
+                    </tr>
+                    {% endfor %}
+
+                    <br>
+
+                    
+                    <!-- <tr style="border: solid black;">
+                    <td style="background-color: greenyellow;">
+                        <p class="display-8"> {{ detail }}</p>
+                    </td>
+                    </tr> -->
+                    
+
+            </table>
+
+            <div style="font-family: Arial Black;text-align: center; border: 2px solid black;"class="alert alert-{{Matched}}">
+                WELCOME TO COAL INDIA LIMITED <br>
+                INFORMATION FETCH {{Matched_Status}}...<br><br>
+
+                {% for detail in details %}
+                Owner: {{ detail[0] }}<br>
+                Driver: {{ detail[1] }}<br>
+                Gender: {{ detail[2] }}<br>
+                Vehicle Type: {{ detail[3] }}<br>
+                RFID: {{ detail[4] }}<br>
+                Mobile Number: {{ detail[5] }}<br>
+                Email: {{ detail[6] }}<br><br>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- <div style="text-align:center ;color: white;">-----------------------------THANKS FOR VISITING US ----------------------------<br></div>
+     -->
+        <br>
+    
+    {% endif %}
+    <!-- <div style="text-align:center ; padding-top: 405px ;color: white;">
+        &#10024;Copyright Dhanush 2022&#10024;</div> -->
+{% endblock  %}
+</div>
+</body>
+</html>

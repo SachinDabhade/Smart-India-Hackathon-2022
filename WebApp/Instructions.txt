@@ -1,0 +1,20 @@
+1. git clone the repository
+
+2. Make the virtual environment for our project
+	a. install python
+	b. pip install virtualenv
+	c. create the virtual environment
+	4. install all the requirements.txt and requirements2.txt using 'pip install -r filename.txt'
+
+3. Make sure that you have tree structure like follow
+	Final Project 
+		SIH - virtual environment
+		static folder
+		templates folder
+		test folder
+
+4. Finally, start the virtual environment using cmd 'SIH\Scripts\activate.bat' in command prompt
+
+5. Run app.py and app_video.py to open project
+
+Thank You - DHANUSH
