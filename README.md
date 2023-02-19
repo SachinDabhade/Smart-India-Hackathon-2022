@@ -26,7 +26,7 @@ I have strong belief on open source contribution and I promote the open source c
 Note: You can also use another libraries for this project.
 
 ## Authors and Contributors
-Contributors are [Sachin Vinayak Dabhade](https://github.com/SachinDabhade), [Ashwini Avinash Patil](https://github.com/Ashwini-05), [Vedant Nilesh Thakur]() and [Shivam Kishorilal Yogi]()
+Contributors are [Sachin Vinayak Dabhade](https://github.com/SachinDabhade), [Ashwini Avinash Patil](https://github.com/Ashwini-05), [Vedant Nilesh Thakur](), [Shivam Kishorilal Yogi](), [Himanshu Kishor Salunke]() and [Yash Raghuvanshi]()
 
 ## License
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/) - Open for All.
